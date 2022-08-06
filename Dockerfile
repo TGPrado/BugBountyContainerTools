@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt-get update -y -q && apt-get upgrade -y -q 
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y -q curl build-essential ca-certificates git zsh
-RUN apt install curl git python3 python3-pip golang-go -y
+RUN apt install curl git python3 python3-pip golang-go jq vim -y
 ENV GOPATH $HOME/go
 ENV PATH="/usr/local/go/bin:${PATH}:/go/bin"
 # install JSScanner
