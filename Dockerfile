@@ -25,5 +25,6 @@ RUN go install -v github.com/sensepost/gowitness@latest
 RUN go install -v github.com/Emoe/kxss@latest
 RUN go install -v github.com/lc/subjs@latest
 RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
-RUN go go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
-VOLUME /home
+RUN go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
+RUN go install github.com/003random/getJS@latest
+VOLUME /root
