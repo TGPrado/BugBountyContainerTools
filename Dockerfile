@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt-get update -y -q && apt-get upgrade -y -q 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y -q curl build-essential ca-certificates git zsh
-RUN apt install curl git python3 python3-pip golang-go jq vim -y
+RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y -q curl build-essential ca-certificates git
+RUN apt install curl git python3 python3-pip golang-go jq vim zsh -y
 ENV GOPATH $HOME/go
 ENV PATH="/usr/local/go/bin:${PATH}:/go/bin"
 # install JSScanner
@@ -27,4 +27,6 @@ RUN go install -v github.com/lc/subjs@latest
 RUN go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 RUN go install -v github.com/projectdiscovery/chaos-client/cmd/chaos@latest
 RUN go install github.com/003random/getJS@latest
+RUN go install github.com/TGPrado/SSearch@latest
+RUN go install github.com/c3l3si4n/godeclutter@HEAD
 VOLUME /root
